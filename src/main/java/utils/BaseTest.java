@@ -8,9 +8,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-// JUnit 5 imports
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 
 public class BaseTest {
     protected WebDriver driver;
@@ -26,16 +23,13 @@ public class BaseTest {
         quitDriver();
     }
 
-    // JUnit setup
-    @BeforeEach
-    public void setUpJUnit() {
-        startDriver();
-    }
-
-    @AfterEach
-    public void tearDownJUnit() {
-        quitDriver();
-    }
+	/*
+	 * // JUnit setup
+	 * 
+	 * @BeforeEach public void setUpJUnit() { startDriver(); }
+	 * 
+	 * @AfterEach public void tearDownJUnit() { quitDriver(); }
+	 */
 
     // Actual driver startup code
     private void startDriver() {
