@@ -1,6 +1,7 @@
 package tests;
 
-
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
@@ -15,25 +16,37 @@ public class AddEmployeeTest extends BaseTest {
 
     @Test
     public void testAddEmployee() {
-        // Step 1: Login
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.login("Admin", "admin123");
+        // Start Extent Report Logging
+        ExtentTest extentTest = extent.createTest("Add Employee Test");
+        test.set(extentTest);
 
-        // Step 2: Navigate to Add Employee
-        EmployeePage empPage = new EmployeePage(driver);
-        empPage.goToAddEmployee();
+        try {
+            extentTest.log(Status.INFO, "Step 1: Logging in as Admin");
+            LoginPage loginPage = new LoginPage(driver);
+            loginPage.login("Admin", "admin123");
+            extentTest.log(Status.PASS, "Logged in successfully");
 
-        // Step 3: Add new employee
-        String firstName = "Test";
-        String lastName = "User" + System.currentTimeMillis(); // unique name
-        empPage.addEmployee(firstName, lastName);
+            extentTest.log(Status.INFO, "Step 2: Navigating to Add Employee");
+            EmployeePage empPage = new EmployeePage(driver);
+            empPage.goToAddEmployee();
+            extentTest.log(Status.PASS, "Navigated to Add Employee page");
 
-        // Step 4: Wait for the Personal Details header to appear
-        By personalDetailsHeader = By.xpath("//h6[text()='Personal Details']");
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        boolean isProfileLoaded = wait.until(ExpectedConditions.visibilityOfElementLocated(personalDetailsHeader)) != null;
+            extentTest.log(Status.INFO, "Step 3: Adding a new employee");
+            String firstName = "Test";
+            String lastName = "User" + System.currentTimeMillis(); // unique name
+            empPage.addEmployee(firstName, lastName);
+            extentTest.log(Status.PASS, "Added new employee: " + firstName + " " + lastName);
 
-        // Step 5: Assert
-        Assert.assertTrue(isProfileLoaded, "Failed to add new employee! Personal Details page not loaded.");
+            extentTest.log(Status.INFO, "Step 4: Waiting for Personal Details header to appear");
+            By personalDetailsHeader = By.xpath("//h6[text()='Personal Details']");
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            boolean isProfileLoaded = wait.until(ExpectedConditions.visibilityOfElementLocated(personalDetailsHeader)) != null;
+            Assert.assertTrue(isProfileLoaded, "Failed to add new employee! Personal Details page not loaded.");
+            extentTest.log(Status.PASS, "Personal Details page loaded - Employee added successfully");
+
+        } catch (Exception e) {
+            test.get().log(Status.FAIL, e);
+            Assert.fail(e.getMessage());
+        }
     }
 }

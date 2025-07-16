@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.testng.EmployeeListTest">
+      <class name="tests.LoginTest">
         <methods>
+          <include name="testLoginWithMultipleData" invocation-numbers="0"/>
           <include name="setUpTestNG"/>
-          <include name="testFindEmployeeByNameAndId"/>
+          <include name="tearDownReport"/>
+          <include name="setUpReport"/>
           <include name="tearDownTestNG"/>
         </methods>
-      </class> <!-- tests.testng.EmployeeListTest -->
+      </class> <!-- tests.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
