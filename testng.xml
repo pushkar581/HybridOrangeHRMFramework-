@@ -3,9 +3,9 @@
 <suite name="HybridOrangeHRMFramework">
   <test name="All Tests">
     <classes>
-      <class name="AddEmployeeTest"/>
-      <class name="LoginTest"/>
-      <class name="LogoutTest"/>
-    </classes>
+  <class name="tests.AddEmployeeTest"/>
+  <class name="tests.LoginTest"/>
+  <class name="tests.LogoutTest"/>
+</classes>
   </test>
 </suite>

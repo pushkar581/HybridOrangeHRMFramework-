@@ -1,74 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-15T12:13:27 NZST" name="Default suite" finished-at="2025-07-15T12:13:46 NZST" duration-ms="19844">
+  <suite started-at="2025-07-16T12:43:53 NZST" name="HybridOrangeHRMFramework" finished-at="2025-07-16T12:44:56 NZST" duration-ms="63588">
     <groups>
     </groups>
-    <test started-at="2025-07-15T12:13:27 NZST" name="Default test" finished-at="2025-07-15T12:13:46 NZST" duration-ms="19844">
-      <class name="tests.testng.EmployeeListTest">
-        <test-method is-config="true" signature="setUpTestNG()[pri:0, instance:tests.testng.EmployeeListTest@4afcd809]" started-at="2025-07-15T12:13:27 NZST" name="setUpTestNG" finished-at="2025-07-15T12:13:32 NZST" duration-ms="5174" status="PASS">
+    <test started-at="2025-07-16T12:43:53 NZST" name="All Tests" finished-at="2025-07-16T12:44:56 NZST" duration-ms="63588">
+      <class name="LogoutTest">
+        <test-method is-config="true" signature="setUpTestNG()[pri:0, instance:LogoutTest@62ddbd7e]" started-at="2025-07-16T12:44:45 NZST" name="setUpTestNG" finished-at="2025-07-16T12:44:50 NZST" duration-ms="4993" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTestNG -->
-        <test-method signature="testFindEmployeeByNameAndId()[pri:0, instance:tests.testng.EmployeeListTest@4afcd809]" started-at="2025-07-15T12:13:32 NZST" name="testFindEmployeeByNameAndId" finished-at="2025-07-15T12:13:46 NZST" duration-ms="14260" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(@href,'viewEmployeeList')] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: C:\Users\agnih\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52018}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52018/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c39e426d499c89dafd43d18dce536546]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(@href,'viewEmployeeList')] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: C:\Users\agnih\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52018}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52018/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c39e426d499c89dafd43d18dce536546
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at pages.EmployeeListPage.goToEmployeeList(EmployeeListPage.java:30)
-at tests.testng.EmployeeListTest.testFindEmployeeByNameAndId(EmployeeListTest.java:19)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="testLogout()[pri:0, instance:LogoutTest@62ddbd7e]" started-at="2025-07-16T12:44:50 NZST" name="testLogout" finished-at="2025-07-16T12:44:56 NZST" duration-ms="5605" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testFindEmployeeByNameAndId -->
-        <test-method is-config="true" signature="tearDownTestNG()[pri:0, instance:tests.testng.EmployeeListTest@4afcd809]" started-at="2025-07-15T12:13:46 NZST" name="tearDownTestNG" finished-at="2025-07-15T12:13:46 NZST" duration-ms="371" status="PASS">
+        </test-method> <!-- testLogout -->
+        <test-method is-config="true" signature="tearDownTestNG()[pri:0, instance:LogoutTest@62ddbd7e]" started-at="2025-07-16T12:44:56 NZST" name="tearDownTestNG" finished-at="2025-07-16T12:44:56 NZST" duration-ms="315" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTestNG -->
-      </class> <!-- tests.testng.EmployeeListTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- LogoutTest -->
+      <class name="LoginTest">
+        <test-method is-config="true" signature="setUpTestNG()[pri:0, instance:LoginTest@4116aac9]" started-at="2025-07-16T12:44:21 NZST" name="setUpTestNG" finished-at="2025-07-16T12:44:26 NZST" duration-ms="5065" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTestNG -->
+        <test-method signature="testLoginWithMultipleData(java.lang.String,java.lang.String)[pri:0, instance:LoginTest@4116aac9]" started-at="2025-07-16T12:44:26 NZST" name="testLoginWithMultipleData" data-provider="loginData" finished-at="2025-07-16T12:44:28 NZST" duration-ms="2723" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithMultipleData -->
+        <test-method is-config="true" signature="tearDownTestNG()[pri:0, instance:LoginTest@4116aac9]" started-at="2025-07-16T12:44:28 NZST" name="tearDownTestNG" finished-at="2025-07-16T12:44:29 NZST" duration-ms="306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTestNG -->
+        <test-method is-config="true" signature="setUpTestNG()[pri:0, instance:LoginTest@4116aac9]" started-at="2025-07-16T12:44:29 NZST" name="setUpTestNG" finished-at="2025-07-16T12:44:33 NZST" duration-ms="4544" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTestNG -->
+        <test-method signature="testLoginWithMultipleData(java.lang.String,java.lang.String)[pri:0, instance:LoginTest@4116aac9]" started-at="2025-07-16T12:44:33 NZST" name="testLoginWithMultipleData" data-provider="loginData" finished-at="2025-07-16T12:44:45 NZST" duration-ms="11489" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[fakeUser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[fakePass]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithMultipleData -->
+        <test-method is-config="true" signature="tearDownTestNG()[pri:0, instance:LoginTest@4116aac9]" started-at="2025-07-16T12:44:45 NZST" name="tearDownTestNG" finished-at="2025-07-16T12:44:45 NZST" duration-ms="418" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTestNG -->
+      </class> <!-- LoginTest -->
+      <class name="AddEmployeeTest">
+        <test-method is-config="true" signature="setUpTestNG()[pri:0, instance:AddEmployeeTest@3754a4bf]" started-at="2025-07-16T12:43:53 NZST" name="setUpTestNG" finished-at="2025-07-16T12:44:07 NZST" duration-ms="14201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTestNG -->
+        <test-method signature="testAddEmployee()[pri:0, instance:AddEmployeeTest@3754a4bf]" started-at="2025-07-16T12:44:07 NZST" name="testAddEmployee" finished-at="2025-07-16T12:44:18 NZST" duration-ms="11154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddEmployee -->
+        <test-method is-config="true" signature="tearDownTestNG()[pri:0, instance:AddEmployeeTest@3754a4bf]" started-at="2025-07-16T12:44:18 NZST" name="tearDownTestNG" finished-at="2025-07-16T12:44:18 NZST" duration-ms="417" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTestNG -->
+      </class> <!-- AddEmployeeTest -->
+    </test> <!-- All Tests -->
+  </suite> <!-- HybridOrangeHRMFramework -->
 </testng-results>
